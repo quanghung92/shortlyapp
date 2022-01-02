@@ -1,0 +1,33 @@
+@import '../../styles/variable.scss';
+
+.wapperBoots {
+  background-image: url('../../assets//images/bg-boost-desktop.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  background-color: $Violet;
+  text-align: center;
+
+  .wapperBootsTile {
+    color: #fff;
+    font-size: 3.7rem;
+    line-height: 3.7rem;
+  }
+
+  .wapperBootsButton {
+    background-color: #fff;
+    width: fit-content;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    overflow: hidden;
+    margin: auto;
+
+    .BootsButton {
+      display: block;
+      width: fit-content;
+    }
+  }
+}

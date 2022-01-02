@@ -1,0 +1,19 @@
+@import '../../styles//variable.scss';
+.contentHome{
+  margin-top: 120px;
+  background-color: $bgHome;
+  padding-bottom:140px;
+}
+
+@media screen and ( max-width: 48em) {
+  .contentHome{
+    padding: 0 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and ( max-width: 36em) {
+  .contentHome{
+    padding: 0;
+  }
+}

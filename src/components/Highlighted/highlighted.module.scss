@@ -1,0 +1,108 @@
+@import '../../styles/variable.scss';
+
+.wapperHighlighted {
+  justify-content: space-between;
+  margin-top: 50px;
+
+  .highlightContent {
+    width: 50%;
+
+    .highlightContentItem {
+      // padding-left: calc((100vw - 1200px)/2);
+
+      .titleHighLightContent {
+        font-size: 6rem;
+        line-height: 6.5rem;
+        margin: 0;
+      }
+
+      .bodyHighLightContent {
+        font-size: 2.1rem;
+        line-height: 2.6rem;
+        margin-top: 0;
+        color: $Gray;
+      }
+
+      .linkHighlight {
+        color: #fff;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        display: block;
+        width: fit-content;
+      }
+    }
+
+  }
+
+  .HighlightImage {
+    width: 50%;
+    position: relative;
+    height: 450px;
+
+    .HighlightImageItem {
+      background-image: url('../../assets//images/illustration-working.svg');
+      background-size: cover;
+      height: 425px;
+      background-repeat: no-repeat;
+      width: 100%;
+      position: absolute;
+      right: calc((1200px - 100vw) / 2);
+    }
+  }
+}
+
+@media screen and (max-width: 75em) {
+  .wapperHighlighted{
+    .HighlightImage{
+      .HighlightImageItem{
+        right: -15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .wapperHighlighted {
+    flex-direction: column;
+    padding: 65px 0 0 !important;
+
+    .highlightContent {
+      width: 100%;
+      order: 2;
+
+      .highlightContentItem {
+        padding: 0;
+
+        .titleHighLightContent {
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: 4rem;
+          line-height: 4.5rem;
+        }
+
+        .bodyHighLightContent {
+          text-align: center;
+          font-size: 2rem;
+        }
+
+        .linkHighlight {
+          margin: auto;
+        }
+      }
+    }
+
+    .HighlightImage {
+      width: 100%;
+      order: 1;
+      height: 400px;
+
+      .HighlightImageItem {
+        right: -30px;
+        height: 370px;
+      }
+    }
+  }
+}

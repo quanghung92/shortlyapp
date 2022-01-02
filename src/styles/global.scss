@@ -1,0 +1,80 @@
+@import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+  line-height: 2rem;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+li{
+  
+  list-style: none;
+  
+}
+
+a{
+  color: $GrayishViolet;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+.btn{
+  padding: 10px 20px;
+  background-color: $Cyan;
+  border: 1px solid $Cyan ;
+  color: $white;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+.grid {
+    
+  display: block;
+  width: 100%;
+  padding: 0;
+  
+}
+.grid.wide{
+  max-width: 1200px ;
+  margin:0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  /* margin -4px để phù hợp cho phần padding của col là 4px */
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+.flex-b {
+  display: flex;
+  align-items: center;
+}
+
+ul{
+  padding-left: 0;
+}
+
+.App{
+  overflow: hidden;
+}
