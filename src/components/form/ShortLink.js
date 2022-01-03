@@ -7,6 +7,7 @@ function ShortLink() {
   const [inputLinkEmpty, setinputLinkEmpty] = useState(false)
   const [listLlinks, setlistLlinks] = useState([])
   const [liCopied, setliCopied] = useState('')
+  const [linkChange, setlinkChange] = useState('')
   const inputShortLinkRef = useRef()
 
   const updateShortLink =(data)=>{
@@ -18,13 +19,8 @@ function ShortLink() {
     setinputLink('')
   }
 
-  const handleShortLink = () => {
-    if (inputLink === '') {
-      setinputLinkEmpty(true)
-    } else {
-      setinputLinkEmpty(false)
-    }
-
+  useEffect(() => {
+    
     const formdata = new FormData();
     const requestOptions = {
       method: 'POST',
@@ -36,6 +32,17 @@ function ShortLink() {
       .then(response => response.json())
       .then(updateShortLink)
       .catch(error => console.log('error', error));
+ 
+  },[linkChange])
+
+  const handleShortLink = () => {
+    setlinkChange(inputLink)
+    if (inputLink === '') {
+      setinputLinkEmpty(true)
+    } else {
+      setinputLinkEmpty(false)
+    }
+    
   }
 
   const handleCopyLink =(index,link)=>{
