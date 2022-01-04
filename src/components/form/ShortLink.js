@@ -27,11 +27,14 @@ function ShortLink() {
       body: formdata,
       redirect: 'follow'
     };
-
-    fetch( `https://api.shrtco.de/v2/shorten?url=${inputLink}`, requestOptions)
+    if(inputLink!==''){
+      fetch( `https://api.shrtco.de/v2/shorten?url=${inputLink}`, requestOptions)
       .then(response => response.json())
       .then(updateShortLink)
       .catch(error => console.log('error', error));
+    }
+
+    
  
   },[linkChange])
 
